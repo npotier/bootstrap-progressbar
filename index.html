@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Boostrap countdown bar example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Nicolas Potier">
+
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="http://twitter.github.com/bootstrap/assets/css/docs.css" rel="stylesheet">
+	<!--[if lt IE 9]>
+		<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.animated-progressbar.js"></script>
+	
+	
+	<link href="http://cdn.bitbucket.org/shekharpro/google_code_prettify/downloads/prettify.css" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="http://cdn.bitbucket.org/shekharpro/google_code_prettify/downloads/prettify.js"></script>
+	</head>
+	<body onload="prettyPrint()">
+		<div class="container">
+			<header class="jumbotron masthead">
+			  <div class="inner">
+			    <h1>jQuery + Bootstrap animated Progessbar examples</h1>
+			    <p>This page demonstrate how the progress bar is working</p>
+			    </div>
+			</header>
+			<h1>Examples</h1>
+			<h2> Begin : 0% | End : 100% | delay : 100ms | duration : 10 seconds</h2>
+			<div class="progress">
+	  			<div class="bar" data-progressbar="on" data-progressbar-begin="0" data-progressbar-end="1" data-progressbar-delay="100" data-progressbar-duration="10000" ></div>
+			</div>
+			<h2> Begin : 100% | End : 0% | delay : 100ms | duration : 10 seconds</h2>
+			<div class="progress">
+	  			<div class="bar" data-progressbar="on" data-progressbar-begin="1" data-progressbar-end="0" data-progressbar-delay="100" data-progressbar-duration="10000" ></div>
+			</div>
+			<h2> Begin : 100% | End : 0% | delay : 100ms | duration : 10 seconds</h2>
+			<div class="progress">
+	  			<div class="bar" data-progressbar="on" data-progressbar-begin="0.5" data-progressbar-end="0" data-progressbar-delay="50" data-progressbar-duration="10000" ></div>
+			</div>
+			<h2> Begin : 0% | End : 100% | delay : 50ms | duration : 5 seconds</h2>
+			<div class="progress">
+	  			<div class="bar" data-progressbar="on" data-progressbar-begin="0" data-progressbar-end="1" data-progressbar-delay="100" data-progressbar-duration="5000" ></div>
+			</div>
+			<h2> Begin : 50% | End : 100% | delay : 100ms | duration : 5 seconds</h2>
+			<div class="progress">
+	  			<div class="bar" data-progressbar="on" data-progressbar-begin="0.5" data-progressbar-end="1" data-progressbar-delay="100" data-progressbar-duration="5000" ></div>
+			</div>
+			<h2> Begin : 7% | End : 75% | delay : 1000ms | duration : 30 seconds</h2>
+			<div class="progress progress-striped active">
+	  			<div class="bar" data-progressbar="on" data-progressbar-begin="0.07" data-progressbar-end="0.75" data-progressbar-delay="1000" data-progressbar-duration="30000" ></div>
+			</div>
+			<div>
+				<h1> Usage</h1>
+				<pre class="prettyprint">
+    &lt;!-- Import Bootstrap and jQuery, and this JS --&gt;
+    &lt;script src="js/jquery.animated-progressbar.js"&gt;&lt;/script&gt;
+
+    &lt;!-- Declare your progressbar --&gt;
+    &lt;div class="progress"&gt;
+        &lt;div class="bar" data-progressbar="on" 
+                         data-progressbar-begin="0"
+                         data-progressbar-end="1" 
+                         data-progressbar-delay="100" 
+                         data-progressbar-duration="10000" &gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- activate the progressbar --&gt;
+    &lt;script type="text/javascript"&gt;
+        $(".bar[data-progressbar='on']").each(function() {
+            //animated_progressbar($(this));
+			$(this).animatedProgressbar();
+        });
+    &lt;/script&gt;
+				</pre>
+			</div>
+		</div>
+    </body>
+	<script type="text/javascript">
+		$(".bar[data-progressbar='on']").each(function() {
+			$(this).animatedProgressbar();
+		});
+	</script>
+</html>
